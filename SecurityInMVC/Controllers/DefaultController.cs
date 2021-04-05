@@ -42,6 +42,23 @@ namespace SecurityInMVC.Controllers
             var data = db.Employees.ToList();
             return View(data);
         }
-
+        [HttpGet]
+        public ActionResult Login()
+        {
+            return View();
+        }
+        [HttpPost]
+        [AllowAnonymous]
+        public ActionResult Login(string name, string pwd)
+        {
+            name = Request.Form["name"];
+            pwd = Request.Form["pwd"];
+            var query = db.Employees.Where(x => x.EmpName == name && x.password == pwd);
+            if (query.Count() == 0)
+                ModelState.AddModelError("", "Invalid Credentials");
+            else
+                FormsAuthentication.RedirectFromLoginPage(name, false);
+            return View();
+        }
     }
 }
