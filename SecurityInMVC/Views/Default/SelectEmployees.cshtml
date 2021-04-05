@@ -1,0 +1,19 @@
+﻿@model IEnumerable<SecurityInMVC.Models.Employee>
+@{
+    ViewBag.Title = "SelectEmployees";
+}
+
+<h2>SelectEmployees</h2>
+<table border="1">
+    @foreach(var m in Model)
+    {
+        <tr>
+            <td>@m.EmpID</td>
+            <td>@m.EmpName</td>
+            <td>@m.Dept</td>
+            <td>@m.Desg</td>
+            <td>@m.Salary</td>
+            <td>@m.projid</td>
+        </tr>
+    }
+</table>

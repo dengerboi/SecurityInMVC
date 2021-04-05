@@ -1,0 +1,47 @@
+﻿@model SecurityInMVC.Models.Employee
+@{
+    ViewBag.Title = "Register";
+}
+
+<h2>Register</h2>
+
+@using(Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+<table border="1">
+    <tr>
+        <td>Enter Name : </td>
+        <td>@Html.TextBoxFor(x => x.EmpName)</td>
+    </tr>
+    <tr>
+        <td>Enter Dept : </td>
+        <td>@Html.TextBoxFor(x => x.Dept)</td>
+    </tr>
+    <tr>
+        <td>Enter Designation : </td>
+        <td>@Html.TextBoxFor(x => x.Desg)</td>
+    </tr>
+    <tr>
+        <td>Enter Salary : </td>
+        <td>@Html.TextBoxFor(x => x.Salary)</td>
+    </tr>
+    <tr>
+        <td>Enter Project ID : </td>
+        <td>@Html.TextBoxFor(x => x.projid)</td>
+    </tr>
+    <tr>
+        <td>Enter Password : </td>
+        <td>@Html.TextBoxFor(x => x.password)</td>
+    </tr>
+    <tr>
+        <td><input type="submit" value="REGISTER" /> </td>
+        <td><input type="reset" value="RESET" /></td>
+    </tr>
+
+
+
+
+
+</table>
+}
+
