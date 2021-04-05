@@ -57,7 +57,18 @@ namespace SecurityInMVC.Controllers
             if (query.Count() == 0)
                 ModelState.AddModelError("", "Invalid Credentials");
             else
-                FormsAuthentication.RedirectFromLoginPage(name, false);
+            {
+                Session["login"] = name;
+                FormsAuthentication.RedirectFromLoginPage(name, false);                
+            }
+            return View();
+        }
+        [HttpGet]
+        public ActionResult Logout()
+        {
+            Session.Abandon();//logout the session
+            Session["login"] = null;//makes login session null
+            ViewBag.text = "Successfully Logged out, hope to see you again";
             return View();
         }
     }

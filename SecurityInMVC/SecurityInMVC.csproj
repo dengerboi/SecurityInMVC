@@ -153,6 +153,7 @@
     <Content Include="Views\Default\Register.cshtml" />
     <Content Include="Views\Default\SelectEmployees.cshtml" />
     <Content Include="Views\Default\Login.cshtml" />
+    <Content Include="Views\Default\Logout.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

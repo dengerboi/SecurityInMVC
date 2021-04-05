@@ -2,7 +2,10 @@
 @{
     ViewBag.Title = "SelectEmployees";
 }
-
+@if(Session["login"]!=null)
+{
+    <div style="background-color: sandybrown;width:auto;height:75px;"><h3>Hello  @Session["login"].ToString()</h3></div>
+}
 <h2>SelectEmployees</h2>
 <table border="1">
     @foreach(var m in Model)
@@ -17,3 +20,6 @@
         </tr>
     }
 </table>
+<div>
+    @Html.ActionLink("Logout","Logout")
+</div>
