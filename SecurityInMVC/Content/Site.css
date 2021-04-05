@@ -1,6 +1,7 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+    background-color: sandybrown;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -15,4 +16,19 @@ select,
 textarea {
     max-width: 280px;
 }
-
+.style1{
+    width: auto;
+    height: 100px;
+    background-color : aqua;
+    color : darkmagenta;
+    font-family: 'Times New Roman', Times, serif;
+}
+.style2 {
+    width: auto;
+    height: 100px;
+    background-color: blueviolet;
+    color: darkblue;
+    font-family: Castellar;
+    font-size: 14px;
+    font-display: block;
+}
